@@ -1,0 +1,35 @@
+.icons{
+    position: absolute;
+    cursor: pointer;
+}
+.icons > img{
+    width: 100px;
+    height: 100px;
+    transition: all 0.2s ease-in-out;
+}
+
+.icons > img:hover{
+    transform: scale(1.1);
+}
+
+.icon1{
+    position: absolute;
+    top:150px;
+    left: 230px;
+}
+.icon2{
+    position: absolute;
+    top:120px;
+    right: 200px;
+}
+.icon3{
+    position: absolute;
+    bottom:130px;
+    left: 280px;
+}
+.icon4{
+    position: absolute;
+    bottom:200px;
+    right: 200px;
+}
+

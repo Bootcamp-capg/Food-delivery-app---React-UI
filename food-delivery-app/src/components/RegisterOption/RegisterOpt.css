@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.registerOpt-container{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.reg-option{
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    height: 400px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.regOpt-box{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 300px;
+    width: 300px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    transition: 0.2s all  ease-in-out;
+    text-decoration: none;
+    color: #303030;
+}
+
+.regOpt-box:hover{
+    background-color: #fc3131;
+    color: white;
+}
+
+.regOpt-image{
+    width: 120px;
+    height: 160px;
+    position: relative;
+}
+
+.regOpt-image > img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+
+.regOpt-box > h1{
+    font-size: 20px;
+    font-family: 'Poppins';
+    font-weight: 500;
+    padding-top: 10px;
+}
+
+.join{
+    font-size: 30px;
+    font-family: 'Poppins';
+    font-weight: 700;
+    color: #303030;
+}
+
+.join > span{
+    color: #FF0000;
+}
+
+
+.already-user{
+    font-size: 16px;
+    font-family: 'Poppins';
+    font-weight: 400;
+    color: #303030;
+    margin-top: 5px;
+}
+
+.signIn{
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+}
+
+
+@media (max-width: 480px){
+    .reg-option{
+        flex-direction: column;
+        width: 60%;
+    }
+
+    .regOpt-box{
+        
+        height: 170px;
+        width: 170px;
+
+    }
+
+    .regOpt-image{
+        width: 80px;
+        height: 85px;
+        position: relative;
+    }
+
+    .regOpt-box > h1{
+        font-size: 16px;
+    }
+
+    .join{
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+}
+
+
