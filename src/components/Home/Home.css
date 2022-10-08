@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.home-container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.home-section{
+    position: absolute;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content:center;
+    align-items: flex-start;
+    flex: 2;
+    padding-left: 7%;
+}
+
+.home-tagline{
+    height: 120px;
+    font-size: 32px;
+    font-family: 'Poppins';
+    color:#303030;
+    font-weight: 700;
+}
+
+.home-para{
+    height: 100px;
+    width: 70%;
+    font-family: "Poppins";
+    font-size: 18px;
+    font-weight: 300;
+    color:#303030;
+}
+
+
+.image{ 
+    position: absolute;
+    width: 560px;
+    height: 100%;
+    right: 0;
+    top: 0;
+    overflow: hidden;
+    flex: 1;
+}
+
+.image > img{
+    width: 100%;
+    height: 100%;
+    transition: 0.25s all linear;
+}
+
+.image > img:hover{
+    transform: scale(1.1);
+}
+
+.home-links{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+@media(max-width: 480px){
+    .home-container{
+        width: 100vw;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        overflow: visible;
+    }
+
+    .home-section{
+        position: absolute;
+        bottom: -50px;
+        display: flex;
+        width: 100%;
+        height: 55%;
+        flex-direction: column;
+        justify-content:flex-start;
+        align-items: flex-start;
+        padding-left: 5%;
+    }
+
+    .image{
+        width: 100%;
+        height: 280px;
+        top: 60px;
+    }
+
+    .home-tagline{
+        height: 90px;
+        font-size: 22px;
+        margin-top: 0;
+    }
+    
+    .home-para{
+        height: 30px;
+        width: 70%;
+        font-size: 12px;
+    }
+
+    .home-links{
+        margin-top: 60px;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 100px;
+        justify-content: center;
+        align-items: center;
+        
+    }
+}

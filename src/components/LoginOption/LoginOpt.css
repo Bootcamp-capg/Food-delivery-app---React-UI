@@ -1,0 +1,64 @@
+.loginOpt-container{
+    position: absolute;
+    display: flex;
+    width: 50%;
+    height: 100%;
+    flex-direction: column;
+    justify-content:center;
+    align-items: flex-start;
+    padding-left: 10%;
+}
+
+.log{
+    font-size: 26px;
+    font-family: 'Poppins';
+    font-weight: 600;
+    color: #303030;
+}
+
+.log-option{
+    display: flex;
+    flex-direction: row;
+    width: 500px;
+    height: 300px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.logOpt-box{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    transition: 0.2s all  ease-in-out;
+    text-decoration: none;
+    color: #303030;
+}
+
+.logOpt-box:hover{
+    background-color: #fc3131;
+    color: white;
+}
+
+.logOpt-image{
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+.logOpt-image > img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.logOpt-box > h1{
+    font-size: 18px;
+    font-family: 'Poppins';
+    font-weight: 500;
+    padding-top: 10px;
+}

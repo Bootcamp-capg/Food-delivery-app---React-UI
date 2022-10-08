@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.section{
+    position: absolute;
+    height: 80vh;
+    width: 80%;
+    top: 100px;
+    left: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.prdct{
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 70%;
+    left: 15%;
+    top: 100px;
+}
+
+.heading{
+    font-size: 36px;
+    font-family: 'Poppins';
+    font-weight: 700;
+    color: #373737;
+}
+
+.all-products{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 10px 40px;
+    margin-top: 50px;
+    overflow-y: scroll;
+}
+
+.food-logout-pos{
+    position: absolute;
+    right:200px;
+    top:50px;
+}
