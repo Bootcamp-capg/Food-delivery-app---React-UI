@@ -8,7 +8,7 @@ const FoodItem = ({f}) => {
   return (
     <div className='product '>
       <div className='product-image'>
-        <img src={images.image} alt="" />
+        <img src={images.image11} alt="" />
       </div>
       <h6>{f.foodName}</h6>
       <h3>{`Rs. ${f.foodPrice}`}</h3>

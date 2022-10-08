@@ -21,9 +21,10 @@
 }
 
 .heading{
-    font-size: 36px;
+    font-size: 32px;
     font-family: 'Poppins';
     font-weight: 700;
+    word-spacing: 5px;
     color: #373737;
 }
 

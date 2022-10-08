@@ -14,6 +14,7 @@ import {images} from './constants'
 import Cart from './components/Cart/Cart';
 import Payment from './components/Payment/Payment';
 import { useSelector } from 'react-redux';
+import RestaurantList from './components/RestaurantList/RestaurantList';
 
 
 function App() {
@@ -80,8 +81,9 @@ function App() {
         <Route path='/login/customer'  element={ <CustomerLogin /> } />
 
         <Route path='/restaurant/addmenu'  element={ <AddMenu /> } />
+        <Route path='/restaurant/list'  element={ <RestaurantList /> } />
 
-        <Route path='/foods'  element={  <Foods foods={foods}/> } />
+        <Route path='/foods'  element={  <Foods /> } />
         <Route path='/cart'  element={ <Cart foods={foods}/> } />
         <Route path='/payment'  element={ <Payment /> } />
       </Routes>

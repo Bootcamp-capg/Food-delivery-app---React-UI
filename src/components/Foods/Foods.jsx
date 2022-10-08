@@ -25,7 +25,7 @@ const Foods = () => {
   <div className='food-logout-pos'><input href="/" type='button' onClick={() => dispatch(Logout())} title="Logout" value="Logout" /></div>
     <div className='section prdct'>
       
-        <h1 className='heading'>Food Menu</h1>
+        <h1 className='heading'>Grab the best of <span style={{ color: "#FF0000"}}>Restaurant</span></h1>
         <div className='all-products p2'>
           { foods.map( (f) => 
             <FoodItem f={f}/>

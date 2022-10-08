@@ -49,7 +49,7 @@ const Register = () => {
           <label htmlFor="password">Password</label>
           <input type="password" onChange={(e) => setPassword(e.target.value)}/>
         </div>
-        <input value='Register' className='alink' type='submit' style={{color:'black'}}/>
+        <input value='Register'  type='submit' />
         { error && console.log(error) }
       </form>
     </div>

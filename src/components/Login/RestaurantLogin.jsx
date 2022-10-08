@@ -44,7 +44,7 @@ const RestaurantLogin = () => {
                       <label htmlFor="">Password</label>
                       <input type="password"  ref={password}/>
                     </div>
-                    <input value='Login' type='submit' href='foods' className='alink' />
+                    <input value='Login' type='submit' href='foods'  />
                 </form>
             </div>
             <div class="image">

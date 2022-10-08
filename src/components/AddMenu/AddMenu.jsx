@@ -1,13 +1,12 @@
 import React , { useState} from 'react'
 import './AddMenu.css'
-import Button from '../Button/Button'
 import { images } from '../../constants'
 import axios from 'axios'
-import { useSelector } from 'react-redux'
+// import { useSelector } from 'react-redux'
 
 const AddMenu = () => {
 
-  const restaurant = useSelector((state) => state.Reducer)
+  // const restaurant = useSelector((state) => state.Reducer)
 
   const [ name, setName] = useState("")
   const [ price, setPrice] = useState("")
