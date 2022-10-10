@@ -83,7 +83,8 @@ function App() {
         <Route path='/restaurant/addmenu'  element={ <AddMenu /> } />
         <Route path='/restaurant/list'  element={ <RestaurantList /> } />
 
-        <Route path='/foods'  element={  <Foods /> } />
+        <Route path='/foods' element={  <Foods /> } />
+        {/* <Route path='/food/getbyrestaurantid/:id'  element={  <Foods /> } /> */}
         <Route path='/cart'  element={ <Cart foods={foods}/> } />
         <Route path='/payment'  element={ <Payment /> } />
       </Routes>

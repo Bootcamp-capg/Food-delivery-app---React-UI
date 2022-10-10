@@ -6,7 +6,6 @@ import { Logout } from '../../actions/index'
 import axios from 'axios'
 import {images} from '../../constants'
 import { useSelector } from 'react-redux'
-import { Navigate } from 'react-router'
 import { useNavigate } from 'react-router'
 
 const RestaurantList = () => {
@@ -25,14 +24,9 @@ const RestaurantList = () => {
             fetchRestaurantList()
         },[])
 
-        const redirect = (e) => {
-            console.log(e.target.restaurantList.id)
-        }
-
-
 
         const addrrest = restaurantList.filter(singleRest => {return singleRest.restaurantAddress === customer.customer.payload.customerAddress})
-        console.log(addrrest)
+        // console.log(addrrest)
 
   return (<>
     <div className='food-logout-pos'><input href="/" type='button' onClick={() => dispatch(Logout())} title="Logout" value="Logout" /></div>
@@ -48,7 +42,7 @@ const RestaurantList = () => {
                     <p>{`Addr: ${r.restaurantAddress}`}</p>
                     <p>{`Call: ${r.restaurantContact}`}</p>
                     </div>
-                    <input type="button" value="View foods" onClick={(e) => {return r.id && navigate('/foods')} }/>
+                    <Button value="View foods" href="foods"/>
                 </div>
             ))}
         </div>
