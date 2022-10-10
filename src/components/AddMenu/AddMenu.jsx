@@ -2,11 +2,12 @@ import React , { useState} from 'react'
 import './AddMenu.css'
 import { images } from '../../constants'
 import axios from 'axios'
-// import { useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
+import Button from '../Button/Button'
 
 const AddMenu = () => {
 
-  // const restaurant = useSelector((state) => state.Reducer)
+  const restaurant = useSelector((state) => state.Reducer)
 
   const [ name, setName] = useState("")
   const [ price, setPrice] = useState("")
@@ -20,8 +21,15 @@ const AddMenu = () => {
         foodName: name,
         foodPrice: price
       })
-      res.data && window.location.replace("/foods");
-    }catch(err){
+
+      const res1 = await axios.put(`http://localhost:1234/food/${res.data.foodId}/addresturant/${restaurant.restaurant.payload.id}`, {
+        foodId: res.data.foodId,
+        id: restaurant.restaurant.payload.id
+      })
+
+      res1.data && window.location.replace('/foods') 
+    }
+    catch(err){
       setError(true);
     } 
   }
@@ -41,6 +49,7 @@ const AddMenu = () => {
                 { error && console.log(error) }
             </form>
         </div>
+        <div className='food-logout-pos add-food'><Button href="foods" value=" Food Menu" /></div>
         <div >
             <div className='icons icon1' > <img  src={images.image7} alt="" />  </div> 
             <div className='icons icon2' > <img  src={images.image8} alt="" />  </div> 

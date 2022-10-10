@@ -23,7 +23,11 @@ const Customer = () => {
         email,
         password
       })
-      res.data && window.location.replace("/login");
+
+      const cart = await axios.post("http://localhost:1234/cart/add/dto", {
+      })
+
+      cart.data && window.location.replace("/login");
     }catch(err){
       setError(true);
     }  
