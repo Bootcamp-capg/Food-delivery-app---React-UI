@@ -4,6 +4,7 @@ import './Cart.css'
 import Order from '../Order/Order';
 import axios from 'axios';
 import { useSelector } from 'react-redux';
+import { useLocation } from 'react-router'
 
 const Cart = () => {
 
@@ -18,6 +19,22 @@ const Cart = () => {
         }
         fetchFoodList()
     },[])
+
+
+    const location = useLocation();
+    const path = location.pathname.split("/")[2];
+    const[orders, setOrders] = useState([])
+
+    useEffect(() => {
+        const fetchOrders = async () => {
+        const res = await axios.get(`http://localhost:1234/orders/getOrder/${path}`)
+        // console.log(res.data)
+        setOrders(res.data)
+        }
+        fetchOrders()
+    },[])
+
+    console.log(orders);
 
 
   return (

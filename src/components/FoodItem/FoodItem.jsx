@@ -19,14 +19,11 @@ const FoodItem = ({f}) => {
     e.preventDefault();
     setError(false)
 
-    try{
-       
+    try{ 
       const res1 = await axios.put(`http://localhost:1234/food/${f.foodId}/addcustomer/${customer.customer.payload.customerId}`,{
         foodId : f.foodId,
         customerId: customer.customer.payload.customerId
       })
-
-    res1.data && window.location.replace("")
 
     }catch(err){
       setError(true)
@@ -58,7 +55,7 @@ const FoodItem = ({f}) => {
         customerId: customer.customer.payload.customerId
       })
 
-      const orderRes = await axios.post("http://localhost:1234/orders/dto/add");
+      const orderRes = await axios.post("http://localhost:1234/orders/add/dto",{});
       
       const res3 = await axios.put(`http://localhost:1234/orders/${cart.data.id}/addcart/${orderRes.data.id}`,{
         cartId:cart.data.id,
