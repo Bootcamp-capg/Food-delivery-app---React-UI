@@ -7,7 +7,7 @@ const Order = () => {
 
     const location = useLocation();
     const path = location.pathname.split("/")[2];
-    const[orders, setOrders] = useState([])
+    const[orders, setOrders] = useState("")
 
     useEffect(() => {
         const fetchOrders = async () => {
@@ -19,22 +19,38 @@ const Order = () => {
     },[])
 
     console.log(orders);
+
+
+    const makePayment = async () => {
+        const pay = await axios.post(`http://localhost:1234/payment/add/dto`, {}) 
+        console.log(pay.data)
+
+        const payres = await axios.put(`http://localhost:1234/payment/${orders.id}/addorders/${pay.data.paymentId}`, {
+            orderId: orders.id,
+            paymentId: pay.data.paymentId
+        })
+
+        payres.data && window.location.replace(`/getpayment/${pay.data.paymentId}`)
+    }
+
+    
     
   return (
     <div className='order'>
+        
         <h1>Order Details</h1>
         <div className='allTotal'>
             <div className='total'>
                 <p>Order ID</p>
-                <h4>txn23486487</h4>    
+                <h4>{orders.id}</h4>    
             </div>
             <div className='total'>
                 <p>Total Price</p>
-                <p>879</p>
+                <p>{orders.price}</p>
             </div>
             <div className='total'>
                 <p>Quantity</p>
-                <p>02</p>
+                <p>{orders.qty}</p>
             </div>
             <div className='total'>
                 <p>Payment Mode</p>
@@ -42,9 +58,10 @@ const Order = () => {
             </div>
             <div className='total final'>
                 <p>Name</p>
-                <h4>John Doe</h4>
-            </div>
-        </div>
+                <h4>{orders.name}</h4>
+            </div> 
+        </div> 
+        <input type="button" value="Pay Now" onClick={makePayment} />
 </div>
   )
 }

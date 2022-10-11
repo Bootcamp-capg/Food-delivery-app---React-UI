@@ -1,13 +1,31 @@
-import React from 'react'
+import React, { useState, useEffect} from 'react'
 import './Payment.css'
 import Button from '../Button/Button'
+import { useLocation } from 'react-router'
+import axios from 'axios'
 
 const Payment = () => {
+
+    const location = useLocation();
+    const path = location.pathname.split("/")[2];
+    const[payments, setPayments] = useState("")
+
+    useEffect(() => {
+        const fetchPayments = async () => {
+        const res = await axios.get(`http://localhost:1234/payment/getpayment/${path}`)
+        // console.log(res.data)
+        setPayments(res.data)
+        }
+        fetchPayments()
+    },[])
+
+    console.log(payments);
+    
   return (
     <>
         <div className='section'>
         <div className='cart-block payment'> 
-            <h1>Your Payment has been made <span style={{ color:'#00C04D'}}>successfully.</span> <br/> <br/><Button value="Buy More" href='foods'/> </h1>
+            <h1>Payment<span style={{ color:'#FF0000'}}>{payments.paymentStatus}.</span> <br/> <br/><Button value="Buy More" href='foods'/> </h1>
             
         </div>
         <div className='order'>
@@ -15,23 +33,16 @@ const Payment = () => {
             <div className='allTotal'>
                 <div className='total'>
                     <p>Transaction ID</p>
-                    <h4>txn23486487</h4>    
+                    <h4>{payments.transactionId}</h4>    
+                </div>
+                <br/>
+                <div className='total'>
+                    <p>Payment Status</p>
+                    <p>{payments.paymentStatus}</p>
                 </div>
                 <div className='total'>
-                    <p>Order ID</p>
-                    <p>ord73746374</p>
-                </div>
-                <div className='total'>
-                    <p>Date</p>
-                    <p>06-10-2022</p>
-                </div>
-                <div className='total'>
-                    <p>Payment Mode</p>
-                    <p>Credit Card</p>
-                </div>
-                <div className='total final'>
-                    <p>Name</p>
-                    <h4>John Doe</h4>
+                    <p>Amount</p>
+                    <p>{payments.amount}</p>
                 </div>
             </div>  
         </div>

@@ -87,7 +87,7 @@ function App() {
         {/* <Route path='/foods' element={  <Foods /> } /> */}
         <Route path='/food/getbyrestaurantid/:id'  element={  <Foods /> } />
         <Route path='/orders/:id'  element={ <Cart foods={foods}/> } />
-        <Route path='/payment'  element={ <Payment /> } />
+        <Route path='/getpayment/:id'  element={ <Payment /> } />
         {/* <Route path='/orders/:id'  element={ <Order /> } /> */}
       </Routes>
     </BrowserRouter>
