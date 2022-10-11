@@ -6,10 +6,12 @@ import {  useDispatch } from 'react-redux'
 import { CustomerLogout, Logout } from '../../actions/index'
 import { useSelector } from 'react-redux'
 import Button from '../Button/Button'
+import { useLocation } from 'react-router'
 
 const Foods = () => {
 
-  //console.log(e)
+  const location = useLocation();
+  const path = location.pathname.split("/")[3];
   const dispatch = useDispatch();
   const restaurant = useSelector( (state) => state.Reducer )
 
@@ -17,12 +19,12 @@ const Foods = () => {
 
         useEffect(() => {
             const fetchFoods = async () => {
-            const res = await axios.get(`http://localhost:1234/food/getbyrestaurentid/${restaurant.restaurant.payload.id}`)
+            const res = await axios.get(`http://localhost:1234/food/getbyrestaurentid/${path}`)
             //console.log(res.data)
             setFoods(res.data)
             }
             fetchFoods()
-        })
+        },[])
 
   return (<>
   <div className='food-logout-pos add-food'><Button href="restaurant/addmenu" value="Add Food" /></div>

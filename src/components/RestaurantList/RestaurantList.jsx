@@ -42,7 +42,7 @@ const RestaurantList = () => {
                     <p>{`Addr: ${r.restaurantAddress}`}</p>
                     <p>{`Call: ${r.restaurantContact}`}</p>
                     </div>
-                    <Button value="View foods" href="foods"/>
+                    <input type="button" value="View foods" onClick={(e) => navigate(`/food/getbyrestaurantid/${r.id}`)}/>
                 </div>
             ))}
         </div>

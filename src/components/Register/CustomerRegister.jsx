@@ -12,6 +12,8 @@ const Customer = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
 
+  
+
   const handled = async (e) => {
     e.preventDefault();
     setError(false)

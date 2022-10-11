@@ -25,7 +25,7 @@ const CustomerLogin = () => {
       })
       dispatch(CustomerLoginSuccess({ payload: res.data}))
       console.log(res.data)
-      window.location.replace('/')
+      window.location.replace('/restaurant/list')
     }catch(err){
       console.log(err)
     }
