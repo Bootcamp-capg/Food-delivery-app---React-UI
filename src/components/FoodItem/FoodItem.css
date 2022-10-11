@@ -63,3 +63,13 @@
     background-color: #000000;
     border-radius: 10px;
   }
+  
+  .food-logout-pos{
+    position: absolute;
+    right:200px;
+    top:50px;
+}
+
+.add-food{
+    right:350px;
+}

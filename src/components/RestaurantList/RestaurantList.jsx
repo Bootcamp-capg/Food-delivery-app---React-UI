@@ -2,7 +2,7 @@ import React , { useState, useEffect} from 'react'
 import Button from '../Button/Button'
 import './RestaurantList.css'
 import { useDispatch } from 'react-redux'
-import { Logout } from '../../actions/index'
+import { CustomerLogout } from '../../actions/index'
 import axios from 'axios'
 import {images} from '../../constants'
 import { useSelector } from 'react-redux'
@@ -27,9 +27,10 @@ const RestaurantList = () => {
 
         const addrrest = restaurantList.filter(singleRest => {return singleRest.restaurantAddress === customer.customer.payload.customerAddress})
         // console.log(addrrest)
+        
 
   return (<>
-    <div className='food-logout-pos'><input href="/" type='button' onClick={() => dispatch(Logout())} title="Logout" value="Logout" /></div>
+    <div className='food-logout-pos'><input href="/" type='button' onClick={() => dispatch(CustomerLogout())} title="Logout" value="Logout" /></div>
     <div className="section">
         <div className='cart-block'> 
             <h1 style={{ wordSpacing:'5px', fontSize: '26px', letterSpacing:"0px" }}>Order from your fav <span style={{ color: "#FF0000"}}>Restaurant</span></h1>
@@ -50,5 +51,6 @@ const RestaurantList = () => {
     </div>
   </>)
 }
+
 
 export default RestaurantList
