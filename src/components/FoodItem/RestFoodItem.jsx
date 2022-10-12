@@ -73,9 +73,8 @@ const RestFoodItem = ({f}) => {
       </div>
       <h6>{f.foodName}</h6>
       <h3>{`Rs. ${f.foodPrice}`}</h3>
-      { customer ? 
-      <input type="button" value="Add to Cart"  onClick={handleCart} /> : 
-      <input type="button" style={{ marginTop: "20px"}} value="Delete" onClick={handleDelete}/> }
+      {/* <input type="button" value="Add to Cart"  onClick={handleCart} /> :  */}
+      {/* <input type="button" style={{ marginTop: "20px"}} value="Delete" onClick={handleDelete}/> } */}
     </div>
   </>)
 }
