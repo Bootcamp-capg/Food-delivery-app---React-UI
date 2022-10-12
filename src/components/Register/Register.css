@@ -53,8 +53,8 @@
 }
 
 label{
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 14px;
+    font-weight: 500;
     font-family: 'Poppins';
 }
 
@@ -75,4 +75,12 @@ input[type="number"], input[type="email"], input[type="text"],input[type="passwo
 input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:focus, input[type="email"]:focus{
     border: 1px solid #FF0000;
     width: 320px;
+}
+
+
+.inputFields > span{
+    font-size: 12px;
+    font-weight: 400;
+    font-family: 'Poppins';
+    color: #FF0000;
 }

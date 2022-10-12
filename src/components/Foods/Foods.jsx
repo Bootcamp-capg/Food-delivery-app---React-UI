@@ -10,25 +10,37 @@ import { useLocation } from 'react-router'
 
 const Foods = () => {
 
+  
+
   const location = useLocation();
   const path = location.pathname.split("/")[3];
   const dispatch = useDispatch();
   const restaurant = useSelector( (state) => state.Reducer )
+  const customer = useSelector( (state) => state.CustomerReducer )
+
 
   const [foods, setFoods] = useState([])
 
         useEffect(() => {
             const fetchFoods = async () => {
-            const res = await axios.get(`http://localhost:1234/food/getbyrestaurentid/${path}`)
+            const res = await axios.get(`http://localhost:1234/food/getbyrestaurentid/${path}`, {})
             //console.log(res.data)
             setFoods(res.data)
             }
             fetchFoods()
         },[])
 
-  return (<>
+  return (
+  <>
   <div className='food-logout-pos add-food'><Button href="restaurant/addmenu" value="Add Food" /></div>
-  <div className='food-logout-pos'><input href="/" type='button' onClick={() => dispatch(Logout()).then(window.location.replace('/'))} title="Logout" value="Logout" /></div>
+  
+  
+  <div className='food-logout-pos'><input href="/" type='button' onClick={() => dispatch(CustomerLogout()).then(window.location.replace('/'))} title="Logout" value="Logout" /></div> 
+    
+    
+    
+    
+    
     <div className='section prdct'>
       
         <h1 className='heading'>Grab the best of <span style={{ color: "#FF0000"}}>Restaurant</span></h1>

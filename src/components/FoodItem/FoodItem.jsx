@@ -13,7 +13,7 @@ const FoodItem = ({f}) => {
 
   const [error, setError] = useState(false);
   const customer = useSelector((state) => state.CustomerReducer);
-  console.log(customer.customer.payload.customerId)
+  // console.log(customer.customer.payload.customerId)
 
   const handleCart = async (e) => {
     e.preventDefault();

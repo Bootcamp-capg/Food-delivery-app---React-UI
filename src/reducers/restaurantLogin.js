@@ -4,8 +4,6 @@ const initialState = {
     error: false
 }
 
-
-
 const customerInitialState = {
     customer: JSON.parse(localStorage.getItem("customer")) || null,
     isFetching: false,
