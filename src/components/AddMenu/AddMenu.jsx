@@ -32,7 +32,7 @@ const AddMenu = () => {
         id: restaurant.restaurant.payload.id
       })
 
-      res1.data && window.location.replace(`/food/getbyrestaurantid/${restaurant.restaurant.payload.id}`) 
+      res1.data && window.location.replace(`/restaurant/foodList/${restaurant.restaurant.payload.id}`) 
     }
     catch(err){
       setError(true);
