@@ -32,7 +32,7 @@ const Foods = () => {
 
   return (
   <>
-  <div className='food-logout-pos add-food'><Button href="restaurant/addmenu" value="Add Food" /></div>
+  {/* <div className='food-logout-pos add-food'><Button href="restaurant/addmenu" value="Add Food" /></div> */}
   
   
   <div className='food-logout-pos'><input href="/" type='button' onClick={() => dispatch(CustomerLogout()).then(window.location.replace('/'))} title="Logout" value="Logout" /></div> 

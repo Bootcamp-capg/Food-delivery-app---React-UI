@@ -10,6 +10,7 @@ import CustomerLogin from './components/Login/CustomerLogin'
 import AddMenu from './components/AddMenu/AddMenu'
 import Logo from './components/Logo/Logo'
 import Foods from './components/Foods/Foods';
+import RestFoods from './components/Foods/RestFoods';
 import Cart from './components/Cart/Cart';
 import Payment from './components/Payment/Payment';
 import { useSelector } from 'react-redux';
@@ -40,6 +41,7 @@ function App() {
 
         {/* <Route path='/foods' element={  <Foods /> } /> */}
         <Route path='/food/getbyrestaurantid/:id'  element={  <Foods /> } />
+        <Route path='/restaurant/foodList/:id'  element={  <RestFoods /> } />
         <Route path='/orders/:id'  element={ <Cart /> } />
         <Route path='/getpayment/:id'  element={ <Payment /> } />
         {/* <Route path='/orders/:id'  element={ <Order /> } /> */}

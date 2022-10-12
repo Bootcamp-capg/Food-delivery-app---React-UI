@@ -54,7 +54,7 @@ const AddMenu = () => {
                 { error && console.log(error) }
             </form>
         </div>
-        <div className='food-logout-pos add-food'><input type="button" onClick={() => navigate(`/food/getbyrestaurantid/${restaurant.restaurant.payload.id}`)} value=" Food Menu" /></div>
+        <div className='food-logout-pos add-food'><input type="button" onClick={() => navigate(`/restaurant/foodList/${restaurant.restaurant.payload.id}`)} value=" Food Menu" /></div>
         <div className='food-logout-pos'><input href="/" type='button' onClick={() => dispatch(Logout()).then(window.location.replace('/'))} title="Logout" value="Logout" /></div>
         <div >
             <div className='icons icon1' > <img  src={images.image7} alt="" />  </div> 
