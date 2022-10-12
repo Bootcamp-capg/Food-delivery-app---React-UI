@@ -66,17 +66,17 @@ const FoodItem = ({f}) => {
   }
 
   return (<>
-    <div className='food-logout-pos add-food'><input type="button" value="Go to Cart" onClick={funCall}/></div>
+    
     <div className='product '>
       <div className='product-image'>
         <img src={images.image11} alt="" />
       </div>
       <h6>{f.foodName}</h6>
       <h3>{`Rs. ${f.foodPrice}`}</h3>
-      { customer ? 
-      <input type="button" value="Add to Cart"  onClick={handleCart} /> : 
-      <input type="button" value="Delete" onClick={handleDelete}/> }
+      <input type="button" value="Add to Cart"  onClick={handleCart} /> 
+      {/* <input type="button" value="Delete" onClick={handleDelete}/>  */}
     </div>
+    <div className='food-logout-pos add-food'><input type="button" value="Go to Cart" onClick={funCall}/></div>
   </>)
 }
 

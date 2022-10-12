@@ -25,6 +25,7 @@
     font-family: 'Poppins';
     font-weight: 700;
     word-spacing: 5px;
+    margin-top: -10px;
     color: #373737;
 }
 
@@ -36,6 +37,7 @@
     padding: 10px 40px;
     margin-top: 50px;
     overflow-y: scroll;
+    gap: 50px;
 }
 
 .food-logout-pos{
