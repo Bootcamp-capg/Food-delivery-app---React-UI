@@ -87,8 +87,6 @@ const Customer = () => {
     return errors;
   }
 
-  
-  
 
 
   return (

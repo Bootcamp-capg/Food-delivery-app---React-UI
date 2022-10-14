@@ -40,8 +40,8 @@ const RestaurantList = () => {
                     <img src={images.image2} alt="" />
                     <div className='data rest-data'>
                         <h4>{r.restaurantName}</h4>
-                    <p>{`Addr: ${r.restaurantAddress}`}</p>
-                    <p>{`Call: ${r.restaurantContact}`}</p>
+                    <p>{` City :  ${r.restaurantAddress} `}</p>
+                    <p>{` Call :  ${r.restaurantContact} `}</p>
                     </div>
                     <input type="button" value="View foods" onClick={(e) => navigate(`/food/getbyrestaurantid/${r.id}`)}/>
                 </div>

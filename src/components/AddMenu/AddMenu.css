@@ -33,3 +33,42 @@
     right: 200px;
 }
 
+
+
+@media(max-width: 480px){
+    .icons > img{
+        width: 60px;
+        height: 60px;
+        transition: all 0.2s ease-in-out;
+    }
+    
+    .icons > img:hover{
+        transform: scale(1.1);
+    }
+    
+    .icon1{
+        position: absolute;
+        top:80px;
+        left: 230px;
+    }
+    .icon2{
+        position: absolute;
+        top:120px;
+        right: 280px;
+    }
+    .icon3{
+        position: absolute;
+        bottom:30px;
+        left: 230px;
+    }
+    .icon4{
+        position: absolute;
+        bottom:80px;
+        right: 200px;
+    }
+
+    .addMenu-title{
+        font-size: 20px;
+    }
+}
+

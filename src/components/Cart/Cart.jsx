@@ -41,7 +41,7 @@ const Cart = () => {
   return (
     <div className='section'>
         <div className='cart-block'> 
-            <h1>Your Cart</h1>
+            <h1>Grab foods from <span style={{ color:"#FF0000"}}>Your Cart</span></h1>
             <div className='overflow p2'>
             { foodListCust.map((food) => (
                 <div className='cart-product'>
@@ -54,6 +54,7 @@ const Cart = () => {
                         </div> */}
                     </div>
                     <p>{`Rs. ${food.foodPrice}`}</p>
+                    <div></div>
                     {/* <Button value="Remove"/> */}
                 </div>
             ))}

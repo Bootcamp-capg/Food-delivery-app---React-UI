@@ -42,7 +42,7 @@ const AddMenu = () => {
   return (
     <>
          <div className='registerOpt-container'>
-            <h1 className='join log-rest'>Add tasty food to the <span> menu </span> ... </h1>
+            <h1 className='join log-rest addMenu-title'>Add tasty food to the <span> menu </span> ... </h1>
             <form action="" className='login-formControl' onSubmit={addFood}>
                 <div className='login-inputFields'>
                     <label htmlFor="">Food Name</label>

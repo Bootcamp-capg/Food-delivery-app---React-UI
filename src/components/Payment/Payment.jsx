@@ -25,7 +25,7 @@ const Payment = () => {
     <>
         <div className='section'>
         <div className='cart-block payment'> 
-            <h1>Payment <span style={{ color:'#FF0000' }}> {payments.paymentStatus}. </span> <br/> <br/><Button value="Buy More" href='restaurant/list'/> </h1>
+            <h1>Payment <span style={{ color:'#009432' }}> Success. </span> <br/> <br/><Button value="Buy More" href='restaurant/list'/> </h1>
             
         </div>
         <div className='order'>
@@ -38,7 +38,7 @@ const Payment = () => {
                 <br/>
                 <div className='total'>
                     <p>Payment Status</p>
-                    <p>{payments.paymentStatus}</p>
+                    <p>Success</p>
                 </div>
                 <div className='total'>
                     <p>Amount</p>
