@@ -30,7 +30,7 @@ const RestaurantList = () => {
         
 
   return (<>
-    <div className='food-logout-pos'><input href="/" type='button' onClick={() => dispatch(CustomerLogout())} title="Logout" value="Logout" /></div>
+    <div className='food-logout-pos'><input href="/" type='button' onClick={() => dispatch(CustomerLogout()).then(window.location.replace('/'))} title="Logout" value="Logout" /></div>
     <div className="section">
         <div className='cart-block'> 
             <h1 style={{ wordSpacing:'5px', fontSize: '26px', letterSpacing:"0px" }}>Order from your fav <span style={{ color: "#FF0000"}}>Restaurant</span></h1>

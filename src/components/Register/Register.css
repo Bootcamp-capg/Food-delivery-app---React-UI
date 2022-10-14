@@ -84,3 +84,12 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:foc
     font-family: 'Poppins';
     color: #FF0000;
 }
+
+
+@media(max-width: 480px){
+    .formControl{
+        width: 450px;
+        padding: 5px 15px;
+    }
+    
+}

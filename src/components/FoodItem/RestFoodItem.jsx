@@ -5,7 +5,7 @@ import {images} from '../../constants'
 import { useSelector } from 'react-redux'
 import { Navigate, useLocation } from 'react-router'
 
-const RestFoodItem = ({f}) => {
+const RestFoodItem = ({singlefood}) => {
 
   const location = useLocation();
   const path = location.pathname.split("/")[3];
@@ -20,8 +20,8 @@ const RestFoodItem = ({f}) => {
     setError(false)
 
     try{ 
-      const res1 = await axios.put(`http://localhost:1234/food/${f.foodId}/addcustomer/${customer.customer.payload.customerId}`,{
-        foodId : f.foodId,
+      const res1 = await axios.put(`http://localhost:1234/food/${singlefood.foodId}/addcustomer/${customer.customer.payload.customerId}`,{
+        foodId : singlefood.foodId,
         customerId: customer.customer.payload.customerId
       })
 
@@ -33,7 +33,7 @@ const RestFoodItem = ({f}) => {
 
   const handleDelete = async () => {
     try{
-      await axios.delete(`http://localhost:1234/food/deletebyid/${f.foodId}`);
+      await axios.delete(`http://localhost:1234/food/deletebyid/${singlefood.foodId}`);
       window.location.replace("");
     }catch(err){
       console.log(err)
@@ -71,8 +71,8 @@ const RestFoodItem = ({f}) => {
       <div className='product-image'>
         <img src={images.image11} alt="" />
       </div>
-      <h6>{f.foodName}</h6>
-      <h3>{`Rs. ${f.foodPrice}`}</h3>
+      <h6>{singlefood.foodName}</h6>
+      <h3>{`Rs. ${singlefood.foodPrice}`}</h3>
 
       {/* <input type="button" value="Add to Cart"  onClick={handleCart} />  */}
       <input type="button"  value="Delete" onClick={handleDelete}/> 

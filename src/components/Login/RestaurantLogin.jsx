@@ -24,7 +24,7 @@ const RestaurantLogin = () => {
       dispatch(LoginSuccess({payload: res.data}));
       window.location.replace("/restaurant/addmenu")  
     }catch(err){
-      console.log("Invalid Credentials!");
+      alert('Invalid Credentials !')
     }
   }
 

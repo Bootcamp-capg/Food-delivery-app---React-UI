@@ -25,7 +25,7 @@ const Payment = () => {
     <>
         <div className='section'>
         <div className='cart-block payment'> 
-            <h1>Payment<span style={{ color:'#FF0000'}}>{payments.paymentStatus}.</span> <br/> <br/><Button value="Buy More" href='foods'/> </h1>
+            <h1>Payment <span style={{ color:'#FF0000' }}> {payments.paymentStatus}. </span> <br/> <br/><Button value="Buy More" href='restaurant/list'/> </h1>
             
         </div>
         <div className='order'>

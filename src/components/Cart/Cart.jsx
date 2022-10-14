@@ -5,6 +5,7 @@ import Order from '../Order/Order';
 import axios from 'axios';
 import { useSelector } from 'react-redux';
 import { useLocation } from 'react-router'
+import { images } from '../../constants'
 
 const Cart = () => {
 
@@ -42,18 +43,18 @@ const Cart = () => {
         <div className='cart-block'> 
             <h1>Your Cart</h1>
             <div className='overflow p2'>
-            { foodListCust.map((p) => (
+            { foodListCust.map((food) => (
                 <div className='cart-product'>
-                    <img src={p.photo} alt="" />
+                    <img src={images.image11} alt="" />
                     <div className='data'>
-                        <h4>{p.foodName}</h4>
+                        <h4>{food.foodName}</h4>
                         {/* <div style={{ display:"flex", flexDirection:'row', justifyContent:'center', alignItems:'center'}}>
                         <label htmlFor='number' style={{ fontSize: '14px', fontWeight:'500', marginRight:'5px'}}>Qty:</label>
                         <input style={{ width:'60px', marginTop:'5px'}} type="number" min={1}  step={1} placeholder={1} />
                         </div> */}
                     </div>
-                    <p>{`Rs. ${p.foodPrice}`}</p>
-                    <Button value="Remove"/>
+                    <p>{`Rs. ${food.foodPrice}`}</p>
+                    {/* <Button value="Remove"/> */}
                 </div>
             ))}
         </div>

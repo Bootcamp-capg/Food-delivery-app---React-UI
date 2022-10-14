@@ -13,14 +13,14 @@ import Foods from './components/Foods/Foods';
 import RestFoods from './components/Foods/RestFoods';
 import Cart from './components/Cart/Cart';
 import Payment from './components/Payment/Payment';
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
 import RestaurantList from './components/RestaurantList/RestaurantList';
 
 
 function App() {
 
-  const restaurant = useSelector((state) => state.Reducer)
-  const customer = useSelector((state) => state.CustomerReducer)
+  // const restaurant = useSelector((state) => state.Reducer)
+  // const customer = useSelector((state) => state.CustomerReducer)
   
   return (
     <BrowserRouter>

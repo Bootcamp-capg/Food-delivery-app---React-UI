@@ -43,8 +43,8 @@ const RestFoods = () => {
         
           <h1 className='heading'>Grab the best of <span style={{ color: "#FF0000"}}>Restaurant</span></h1>
           <div className='all-products p2'>
-            { foods.map( (f) => 
-              <RestFoodItem f={f}/>
+            { foods.map( (singlefood) => 
+              <RestFoodItem singlefood={singlefood}/>
           )}
           </div>
       </div>

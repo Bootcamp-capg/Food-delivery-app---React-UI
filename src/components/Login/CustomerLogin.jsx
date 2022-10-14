@@ -27,7 +27,7 @@ const CustomerLogin = () => {
       console.log(res.data)
       window.location.replace('/restaurant/list')
     }catch(err){
-      console.log(err)
+      alert('Invalid Credentials !')
     }
   }
 
